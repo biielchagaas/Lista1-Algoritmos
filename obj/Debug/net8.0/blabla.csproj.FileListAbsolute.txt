@@ -12,3 +12,4 @@ C:\Users\2025202060028\source\repos\blabla\obj\Debug\net8.0\refint\blabla.dll
 C:\Users\2025202060028\source\repos\blabla\obj\Debug\net8.0\blabla.pdb
 C:\Users\2025202060028\source\repos\blabla\obj\Debug\net8.0\blabla.genruntimeconfig.cache
 C:\Users\2025202060028\source\repos\blabla\obj\Debug\net8.0\ref\blabla.dll
+C:\Users\2025202060028\source\repos\blabla\obj\Debug\net8.0\blabla.sourcelink.json

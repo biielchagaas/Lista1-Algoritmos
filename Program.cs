@@ -1,8 +1,9 @@
-﻿using System;
+﻿using static System.Console;
 class Lista
 {
     static void Main(string[] args)
     {
+        /*
         Console.WriteLine("Exercício 1: \n");
 
         //Ex 1
@@ -43,10 +44,10 @@ class Lista
 
         //Ex 5
         Console.WriteLine("Informe sua idade em anos: ");
-        int idadeAnos = Convert.ToInt32(Console.ReadLine());
-        int dias = idadeAnos * 365;
-        int horas = dias * 24;
-        int minutos = horas * 60;
+        double idadeAnos = Convert.ToDouble(Console.ReadLine());
+        double dias = idadeAnos * 365.25;
+        double horas = dias * 24;
+        double minutos = horas * 60;
         Console.WriteLine($"Você viveu aproximadamente {dias} dias, {horas} horas e {minutos} minutos.\n");
 
         Console.WriteLine("Exercício 6: \n");
@@ -79,17 +80,29 @@ class Lista
         Console.WriteLine("Exercício 8: \n");
 
         //Ex 8
-        Console.WriteLine("Informe quantos quilômetros o veículo faz com 1 litro de gasolina: ");
-        double kmPorLitro = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Informe o consumo do veículo (km por litro): ");
+        double consumo = double.Parse(Console.ReadLine());
 
-        Console.WriteLine("Informe a distância da viagem em quilômetros: ");
-        double distanciaViagem = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Informe a distância da viagem (em km): ");
+        double distancia = double.Parse(Console.ReadLine());
 
-        double litrosGastara = distanciaViagem / kmPorLitro;
-        Console.WriteLine($"O veículo gastará aproximadamente {litrosGastara} litros de gasolina na viagem.");
+        Console.Write("Informe quantos litros há no tanque atualmente: ");
+        double litrosNoTanque = double.Parse(Console.ReadLine());
 
-        double autonomia = kmPorLitro * 50;
-        Console.WriteLine($"A autonomia do veículo é de aproximadamente {autonomia} quilômetros sem reabastecer.\n");
+        double litrosNecessarios = distancia / consumo;
+        double autonomia = consumo * litrosNoTanque;
+
+        Console.WriteLine($"\nLitros necessários para a viagem: {litrosNecessarios:F2} L");
+        Console.WriteLine($"Autonomia com o combustível atual: {autonomia:F2} km");
+
+        if (litrosNecessarios <= litrosNoTanque)
+        {
+            Console.WriteLine("O combustível é suficiente para a viagem!");
+        }
+        else
+        {
+            Console.WriteLine("Atenção: será necessário reabastecer durante a viagem.");
+        }
 
         Console.WriteLine("Exercício 9: \n");
 
@@ -130,8 +143,209 @@ class Lista
 
         Console.WriteLine($"Total arrecadado: R$ {totalArrecadado:C2}.");
 
-        Console.WriteLine("Fim da lista!!! Clique em qualquer tecla para fechar!!!");
+        Console.WriteLine("Fim da lista!!! Clique em qualquer tecla para fechar!!!");*/
+        /*
+        int valor1, valor2, soma;
 
-        Console.ReadKey();
+        WriteLine("Digite o primeiro valor: ");
+        valor1 = Convert.ToInt32(ReadLine());
+        WriteLine("Digite o segundo valor: ");
+        valor2 = Convert.ToInt32(ReadLine());
+
+        soma = valor1 + valor2;
+
+        if (soma > 10)
+        {
+            WriteLine(soma);
+        }*/
+        /*
+        Write("Digite seu nome: ");
+        string nome = ReadLine();
+        Console.Write("Digite sua data de nascimento: ");
+        DateTime dataNasc = Convert.ToDateTime(ReadLine());
+
+        int calc = 0;
+        int anoNasc = dataNasc.Year;
+        int anoAtual = DateTime.Now.Year;
+        bool festa = false;
+
+        calc = anoAtual - anoNasc;
+
+        if (calc < 18)
+        {
+            festa = true;
+        }
+
+        if (festa)
+        {
+            WriteLine($"{nome}, você pode entrar na festa!\nSeja bem vindo!");
+        }*/
+        /*
+        Write("'M' para homem!\n'F' para mulher!\nDigite aqui: ");
+        char sexo = Convert.ToChar(ReadLine().ToUpper());
+        if (sexo == 'M')
+        {
+            WriteLine("\nSexo masculino!");
+        }
+        else
+        {
+            WriteLine("\nSexo feminino!");
+        }
+        */
+        /*
+        Write("Digite um número: ");
+        int numero = Convert.ToInt32(ReadLine());
+        Write("Digite outro número: ");
+        int numero2 = Convert.ToInt32(ReadLine());
+        int soma = numero + numero2;
+
+        if (soma >= 10)
+        {
+            soma = soma - 5;
+        }
+        else
+        {
+            soma = soma + 7;
+        }
+
+        WriteLine($"\nO resultado é: {soma}");
+        */
+        /*
+        Write("Digite o valor do produto: ");
+        double valorProduto = Convert.ToDouble(ReadLine());
+        Write("Digite a quantidade a ser comprada: ");
+        int quantidade = Convert.ToInt32(ReadLine());
+        double subTotal = valorProduto * quantidade;
+
+        if (quantidade > 20)
+        {
+            subTotal = subTotal * 0.9;
+        }
+        else
+        {
+            subTotal = subTotal * 0.95;
+        }
+
+        WriteLine($"\nO valor total da compra é: R$ {subTotal:C2}");
+        */
+        /*
+        Write("Digite um número: ");
+        int numero = Convert.ToInt32(ReadLine());
+        Write("Digite outro número: ");
+        int numero2 = Convert.ToInt32(ReadLine());
+
+        if (numero >= numero2)
+        {
+            if (numero > numero2)
+            {
+                WriteLine($"{numero} é maior que {numero2}!");
+            }
+            else
+            {
+                WriteLine("Os dois números são iguais!");
+            }
+        }
+        else
+        {
+            WriteLine($"{numero} não é maior que {numero2}!");
+        }
+        */
+        /*
+        Write("Digite um número: ");
+        int numero = Convert.ToInt32(ReadLine());
+        if (numero >= 10 && numero <= 50)
+        {
+            WriteLine("Número Digitado é Válido");
+        }
+        else
+        {
+            WriteLine("Número Fora da Faixa");
+        }*/
+        /*
+        Write("Digite sua idade: ");
+        int idade = Convert.ToInt32(ReadLine());
+        Write("Digite sua altura: ");
+        double altura = Convert.ToDouble(ReadLine());
+
+        if (idade >= 18 && altura >= 1.70)
+        {
+            WriteLine("Apto!");
+        }
+        else
+        {
+            WriteLine("Inapto!");
+        }*/
+        /*
+        Write("Digite o seu sexo: ");
+        string sexo = ReadLine().ToUpper();
+
+        if (sexo == "MASCULINO" || sexo == "FEMININO")
+        {
+            WriteLine("Sexo Válido");
+        }
+        else
+        {
+            WriteLine("Sexo Inválido");
+        }*/
+        /*
+        Console.WriteLine("1 - Cadastrar");
+        Console.WriteLine("2 - Alterar");
+        Console.WriteLine("3 - Excluir");
+        Write("Escolha uma opção: ");
+        int opcao = Convert.ToInt32(ReadLine());
+
+        if (opcao == 1 || opcao == 2 || opcao == 3)
+        {
+            Write("Opção Válida");
+        }
+        else
+        {
+            Write("Opção Inválida");
+        }*/
+
+        int CONTA = 999;
+        int SENHA = 456;
+        double SALDO = 100;
+
+        inicio:
+
+        Write("Informe o número da conta: ");
+        int contaInformada = Convert.ToInt32(ReadLine());
+
+        Write("Informe a senha: ");
+        int senhaInformada = Convert.ToInt32(ReadLine());
+
+        if (contaInformada != CONTA)
+        {
+            Clear();
+            WriteLine("Erro: Conta inválida.");
+            goto inicio;
+        }
+        else if (senhaInformada != SENHA)
+        {
+            Clear();
+            WriteLine("Erro: Senha incorreta.");
+            goto inicio;
+        }
+        else
+        {
+            meio:
+            Write("Informe o valor a ser sacado: ");
+            double valorSaque = Convert.ToDouble(ReadLine());
+
+            if (valorSaque > SALDO)
+            {
+                Clear();
+                WriteLine("Erro: Saldo insuficiente.");
+                goto meio;
+            }
+            else
+            {
+                SALDO -= valorSaque;
+                WriteLine($"Saque realizado com sucesso! Saldo atual: R$ {SALDO:C2}");
+            }
+        }
+        WriteLine("Fim do programa! Pressione qualquer tecla para sair...");
+        ReadKey();
     }
 }
